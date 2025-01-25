@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'Supports/About/style.css' %}">
+    <!--Linking Swiper CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slider-wrapper swiper-wrapper">
+            <div class="slider-item swiper-slide">
+                <div class="slider-content">
+                    <h3 class="slider-subtitle">Udit Dhiman</h3>
+                    <h2 class="slide-title">Frontend Developr</h2>
+                    <p class="slide-description">Welcome to ProCoders, your ultimate destination for programming content!</p> <p>Our mission is to provide comprehensive resources and tools to help you master various programming languages, understand complex concepts through detailed notes, and apply your knowledge through practical projects.</p>
+                    <a href="https://github.com/UditDhiman5" class="slide-button"><span>Learn More</span></a>
+                </div>
+            </div>
+            <div class="slider-item swiper-slide">
+                <div class="slider-content">
+                    <h3 class="slider-subtitle">Vansh Sharma</h3>
+                    <h2 class="slide-title">Backend Developer</h2>
+                    <p class="slide-description"><strong>Programming Languages:</strong> We cover a wide range of programming languages including Python, HTML, CSS, JavaScript, Java, and more.</p>
+                    <p class="slide-description"><strong>Notes:</strong> Detailed notes on various topics to help you understand the core concepts of language.</p>
+                    <p class="slide-description"><strong>Projects:</strong> Practical projects to apply your knowledge and build real-world applications.</p>
+                    <a href="https://github.com/VanshSharma5" class="slide-button"><span>Learn More</span></a>
+                </div>
+            </div>
+            <div class="slider-item swiper-slide">
+                <div class="slider-content">
+                    <h3 class="slider-subtitle">Other Members</h3>
+                    <h2 class="slide-title">Our Team is very Delightful</h2>
+                    <p class="slide-description">ProCoders is powered by a team of passionate programmers and educators who are dedicated to providing high-quality content to help you succeed in your programming journey.</p>
+                    <a href="#" class="slide-button"><span>Learn More</span></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-controls">
+            <ul class="slider-pagination">
+                <li class="slider-tab">About</li>
+                <li class="slider-tab">Content</li>
+                <li class="slider-tab">Developers</li>
+            </ul>
+        </div>
+    </div>
+
+    <!--Linking Swiper JS-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="{% static 'Supports/About/script.js' %}"></script>
+</body>
+</html>

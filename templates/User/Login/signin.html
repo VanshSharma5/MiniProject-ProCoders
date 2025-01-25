@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+    <head>
+        <title>Sign Up</title>
+        <link rel="stylesheet" href="{% static 'User/Login/animlogin.css' %}">
+    </head>
+    <body>
+        <div class="box">
+            <span class="borderline"></span>
+            <form method="post" action="SignIn">
+                {% csrf_token %}
+                <h2>Sign in</h2>
+                <div class="inputbox">
+                    <input type="text" name="username" required="required">
+                    <span>Username</span>
+                    <i></i>
+                </div>
+                <div class="inputbox">
+                    <input type="email" name="email" required="required">
+                    <span>Email</span>
+                    <i></i>
+                </div>
+                <div class="inputbox">
+                    <input type="password" name="password" required="required">
+                    <span>Password</span>
+                    <i></i>
+                </div>
+                <div class="inputbox">
+                    <input type="password" name="password2" required="required">
+                    <span>Confirm Password</span>
+                    <i></i>
+                </div>
+                <center><input type="submit" value="Login"></center>
+            </form>
+        </div>
+    </body>
+</html>

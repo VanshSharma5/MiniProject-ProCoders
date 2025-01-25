@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procoders</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="bdy">
+        <nav class="navbar">
+            <ul class="sidebar">
+                <a href="#"><li onclick=hideSidebar()><svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></li></a>
+                <a href="/" class="sidebar_a"><li>Home</li></a>
+                <a href="ChatRoom" class="sidebar_a"><li>Chat Room</li></a>  
+                <a href="Supports/About" class="sidebar_a"><li>About Us</li></a>
+                <a href="/Quiz" class="sidebar_a"><li>Quiz</li></a>
+                {% if user.is_authenticated %}
+                    <a href="User/LogOut" class="sidebar_a"><li>Log Out</li></a>
+                {% else %}
+                    <a href="User/LogIn" class="sidebar_a"><li>Log In</li></a>
+                {% endif %}            
+            </ul>
+            <ul class="mainbar">
+                <a href="#" class="main_head"><li>                    
+                    {% if user.is_authenticated %}
+                        {{user.username}}
+                    {% else %}
+                        ProCoders
+                    {% endif %}            
+                </li></a>
+                <a href="/" class="hideOnMobile"><li>Home</li></a>
+                <a href="ChatRoom" class="hideOnMobile"><li>Chat Room</li></a>
+                <a href="Supports/About" class="hideOnMobile"><li>About Us</li></a>
+                <a href="/Quiz" class="hideOnMobile"><li>Quiz</li></a>
+                {% if user.is_authenticated %}
+                    <a href="User/LogOut" class="hideOnMobile"><li>Log Out</li></a>
+                {% else %}
+                    <a href="User/LogIn" class="hideOnMobile"><li>Log In</li></a>
+                {% endif %}            
+                <a href="#" class="menu-button"><li onclick=showSidebar()><svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></li></a>
+            </ul>
+        </nav>

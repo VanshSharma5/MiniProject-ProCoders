@@ -1,0 +1,36 @@
+{% extends "content.html" %}
+
+{% block content %}
+<div class="content">
+    <div class="wel">
+        <h1>WELCOME</h1>
+        <h3>To The</h3>
+        <h1>ProCoders</h1>
+    </div>
+    <div class="main">
+        <div class="submain" id="languages">
+                <div class="container_row1">
+                    {% for language in languages %}
+                    <div class="container">
+                            <div class="container">
+                                <div class="card">
+                                    <div class="front_python" style="background-image: url(/static/Supports/Language/{{language}}.png); background-size : contain;background-position : center; background-repeat : no-repeat;"></div>
+                                    <div class="back_python">
+                                        <a href="/Supports/Language/{{language}}" target="_blank">{{language}}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% if forloop.counter|divisibleby:3 %}
+                    </div>
+                    <div class="container_row1">
+                        {% endif %}
+
+                    {% endfor %}
+                </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+{% endblock %}

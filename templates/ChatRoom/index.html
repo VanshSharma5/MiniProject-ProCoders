@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin : 0;
+            padding : 0;
+        }
+
+        body{
+            height :100vh;
+            width : 100%%;
+            display : flex;
+            justify-content : center;
+            align-items : center;
+        }
+
+        .main{
+            display : flex;
+            flex-direction : column;
+            justify-content : center;
+            align-items : center;
+            height : 50vh;
+            padding : 10px;
+            border : 2px solid #000;
+            border-radius : 15px;
+            width : 40vw;
+        }
+
+        .main h2{
+            padding-bottom : 6rem;
+            font-size : 3rem;
+        }
+
+        .main label{
+            padding : 0.5rem 1rem 0.5rem 0.3rem; 
+        }
+
+        .main p{
+            padding : 1rem 0 1rem 0;
+        }
+
+        .main form{
+            display : flex;
+            justify-content : center;
+            flex-direction : column;
+        }
+
+        @media screen and (max-width : 880px){
+            .main{
+                width : 30vw;
+            }
+        }
+
+        @media screen and (max-width : 440px){
+            .main{
+                width : 50vw;
+            }
+
+            .main h2{
+                font-size : 2rem;
+            }
+
+            .main label{
+                font-size : 10px;
+            }
+
+            .choose{
+                display : flex;
+                flex-direction : column;
+            }
+            
+            .choose input{
+                float : right;
+            }
+        }
+    </style>    
+</head>
+<body>
+    <div class="main">
+        <h2>Chat Room</h2>
+    <form method="post" action="checkview">
+        {% csrf_token %}
+        <div class="choose">
+            <div class="c1">
+                <label>Join Room</label>
+                <input type="radio" name="room_choice" value="join" checked>
+            </div>
+            <div class="c2">
+                <label>Create Room</label>
+                <input type="radio" name="room_choice" value="create">
+            </div>    
+        </div>
+        <br>
+        <p>Enter Room name</p>
+        <input name="room_name" >
+        <!--p>Enter your Username</p!-->
+        <br>
+        <input type="hidden" name="username" value="{{user.username}}">
+        <br>
+        <input type="submit">
+    </form>
+</div>
+</body>
+</html>

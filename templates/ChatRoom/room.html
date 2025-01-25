@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+{% include "header.html" %}
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+        <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        body {
+          margin: 0 auto;
+          max-width: 800px;
+          padding: 0 20px;
+        }
+        
+        .container-darker-left ,.container-darker-right{
+          border: 2px solid #dedede;
+          background-color: #f1f1f1;
+          border-radius: 5px;
+          padding: 10px;
+          margin: 10px 0;
+          width : 8rem;
+        }
+        
+        .container-darker-left{
+            width : 80%;
+        }
+
+        .container-darker-right{
+            display : flex;
+            flex-direction : column;
+            align-items : right;
+            justify-content : right;
+            width : 80%;
+            text-align : right;
+        }
+
+        .container-darker-right1{
+            display : flex;
+            align-items : left;
+            justify-content : right;
+        }
+
+        .darker {
+          border-color: #ccc;
+          background-color: #ddd;
+        }
+        
+        .container::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+        
+        .container img {
+          float: left;
+          max-width: 60px;
+          width: 100%;
+          margin-right: 20px;
+          border-radius: 50%;
+        }
+        
+        .container img.right {
+          float: right;
+          margin-left: 20px;
+          margin-right:0;
+        }
+        
+        .time-right {
+            float: right;
+          color: #aaa;
+        }
+        
+        .time-left {
+          float: left;
+          color: #999;
+        }
+
+        #display{
+            margin-bottom : 7rem;
+            display : flex;
+            flex-direction : column;
+        }
+
+        .container darker{
+            display : flex;
+            align-items : right;
+        }
+
+        </style>
+
+    </head>
+    <body>
+        <center><h1>ProCoders ({{room}})</h1></center>
+        <hr> 
+        <hr> 
+        <div id="display">
+
+        </div>
+        <script>
+            $(document).ready(function(){
+            
+            setInterval(function(){
+                $.ajax({
+                    type: 'GET',
+                    url : "/chat_room/get_messages/{{room}}",
+                    success: function(response){
+                        //console.log(response);
+                        $("#display").empty();
+                        for (var key in response.messages)
+                        {
+                            if(response.messages[key].user == "{{user.username}}") {
+                                var temp="<div class='container-darker-right1'><div class='container-darker-right'><b>"+response.messages[key].user+"</b><p>"+response.messages[key].value.replace(/(?:\r\n|\r|\n)/g, '<br>')+"</p><span class='time-left'>"+response.messages[key].date+"</span></div></div>";
+                            }
+                            else {
+                                var temp="<div class='container-darker-left'><b>"+response.messages[key].user+"</b><p>"+response.messages[key].value.replace(/(?:\r\n|\r|\n)/g, '<br>')+"</p><span class='time-left'>"+response.messages[key].date+"</span></div>";
+                            }
+                            $("#display").append(temp);
+                        }
+                    },
+                    error: function(response){
+                        alert('An error occured')
+                    }
+                });
+            },1000);
+            })
+        </script>
+
+
+            <style>
+                .text{
+                    border-radius : 10px;
+                    width : 45rem;
+                }
+            
+                input[type=submit] {
+                    background-color: #4CAF50;
+                color: white;
+                padding: 14px 14px;
+                margin: 8px 10px;
+                border-radius: 50%;
+                border: none;
+                cursor: pointer;
+
+                }
+                
+                input[type=submit]:hover {
+                background-color: #45a049;
+                }
+            
+                div {
+                border-radius: 5px;
+                background-color: #f2f2f2;
+                padding: 20px;
+                }
+
+                #post-form{
+                    position : fixed;
+                    bottom : 0;
+                    padding : 1rem 1rem;
+                    display : flex;
+                }
+                
+                @media screen and (max-width : 440px){
+                    #post-form textarea{
+                        width : 70vw;
+                    }
+                }
+                </style>
+
+            <form id="post-form">
+                {% csrf_token %}
+                <input type="hidden" name="username" id="username" value="{{user.username}}"/>
+                <p></p>
+                <input type="hidden" name="room_id" id="room_id" value="{{room_details.id}}"/>
+                <p></p>
+                <textarea class="text" type="text" name="message" id="message" required></textarea>
+                <p></p>
+                <input type="submit" value="⋙">
+            </form>
+</body>
+<script>
+    $(document).on('submit','#post-form',function(e){
+        e.preventDefault();
+    
+        $.ajax({
+          type:'POST',
+          url:'/send',
+          data:{
+              username:$('#username').val(),
+              room_id:$('#room_id').val(),
+              message:$('#message').val(),
+            csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
+          },
+          success: function(data){
+            //alert(data)
+          }
+        });
+        document.getElementById('message').value = ''
+      });
+    </script>
+</script>
+</html>

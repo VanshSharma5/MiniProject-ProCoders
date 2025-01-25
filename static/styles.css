@@ -1,0 +1,339 @@
+.pacifico-regular {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image : url(Assests/bdy.jpg);
+    background-position: center;
+    background-size : cover;
+    min-height : 100vh;
+    width: 100vw;
+}
+
+.navbar{
+    background-color : white;
+    box-shadow : 5px -5px 5px rgba(236, 232, 232, 0.1) inset;
+}
+
+.mainbar{
+    display: flex;
+}
+.navbar ul{
+    list-style : none;
+}
+
+.navbar li{
+    height : 50px;
+    display : flex;
+    align-items : center;
+}
+
+.navbar a{
+    padding : 0px 30px;
+    text-decoration : none;
+    color : black;
+}
+
+.navbar a.hideOnMobile:hover{
+    background-color: rgba(24, 23, 23, 0.63);
+    color: white;
+}
+
+.navbar a.sidebar_a:hover{
+    background-color: rgba(24, 23, 23, 0.63);
+    color: white;
+}
+
+.navbar a:first-child{
+    margin-right : auto;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 300px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.447);
+    backdrop-filter: blur(10px);
+    box-shadow : -10px 0px 10px rgba(0,0,0,0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content : flex-start;
+    transition : 0.3s ease-out;
+}
+
+.sidebar ul{
+    width: 100%;
+}
+
+.sidebar a{
+    width: 100%;
+}
+
+.content{
+    height: 90%;
+    width: 100vw;
+}
+
+.main_head{
+    font-size : 30px;
+}
+
+.wel{
+    height: 50%;
+    max-width: 100vw;
+    box-shadow: 0px -3px 10px rgba(83, 82, 82, 0.534) inset;
+    backdrop-filter : blur(5px);
+    display : flex;
+    align-items : center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.wel h1{
+    color: rgb(234, 231, 231);
+    text-shadow: 4px 4px 5px rgba(69, 67, 67, 0.872);
+    padding: 20px;
+    font-size : 65px;
+    background-color : rgba(0, 0, 0, 0.847);
+    border-radius : 40px;
+    margin : 8px;
+}
+
+.wel h3{
+    color: rgb(30, 29, 29);
+    text-shadow: 4px 2px 5px rgb(127, 124, 124);
+    padding: 10px;
+    font-size : 50px;
+    background-color : rgba(255, 255, 255, 0.847);
+    border-radius : 50%;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    height: 70%;
+}
+
+.submain{
+    margin: 20px;
+    height: 90%;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color : white;
+    border-radius : 10px;
+}
+
+.container_row1{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container_row2{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container{
+    height: 220px;
+    width: 200px;
+    margin : 20px;
+}
+
+.container:hover .card{
+    transform : rotateY(180deg);
+    cursor : pointer;
+}
+
+.card{
+    height:220px;
+    width:230px;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.front_python,.back_python,.back_css,.back_html,.front_html,.front_css{
+    border : 1px solid black;
+    box-shadow : 2px 2px 5px 5px rgba(152, 151, 151, 0.596);
+    border-radius : 10px;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+.front_java,.back_java,.back_javascript,.front_javascript,.front_c,.back_c{
+    border : 1px solid black;
+    box-shadow : 2px 2px 5px 5px rgba(152, 151, 151, 0.596);
+    border-radius : 10px;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+.front_python{
+    background-image: url(Assests/Python.png);
+    background-size : cover;
+    background-position : center;
+    background-repeat : no-repeat;
+}
+
+.front_html{
+    background-image: url(Assests/html.png);
+    background-size : contain;
+    background-position : center;
+    background-repeat : no-repeat;
+}
+
+.front_css{
+    background-image: url(Assests/css.png);
+    background-size : contain;
+    background-position : center;
+    background-repeat : no-repeat;
+}
+
+.front_javascript{
+    background-image: url(Assests/javascript.png);
+    background-size : contain;
+    background-position : center;
+    background-repeat : no-repeat;
+}
+
+.front_java{
+    background-image: url(Assests/java.png);
+    background-size : cover;
+    background-position : center;
+    background-repeat : no-repeat;
+}
+
+.front_c{
+    background-image: url(Assests/c.png);
+    background-size : cover;
+    background-position : center;
+    background-repeat : no-repeat;
+}
+
+.back_python a,.back_html a,.back_css a,.back_java a,.back_javascript a,.back_c a{
+    color : white;
+    font-size : 40px;
+    text-decoration : none;
+}
+
+.back_python ,.back_css ,.back_html,.back_c{
+    background-color:#101010d8;
+    transform:rotateY(180deg);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:5rem;
+}
+
+.back_javascript ,.back_java{
+    background-color:#101010d8;
+    transform:rotateY(180deg);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:5rem;
+}
+
+footer{
+    height: 4rem;
+    background-color: black;
+    color : white;
+    display: flex;
+    justify-content: center;
+    align-items : center; 
+}
+
+footer p{
+    font-size : 20px;
+}
+
+@media screen and (max-width : 1100px){
+    .container_row1{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container_row2{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wel{
+        height: 30%;
+    }
+
+    .wel h1{
+        font-size: 30px;
+    }
+
+    .wel h3{
+        font-size : 20px;
+    }
+}
+
+@media screen and (min-width : 778px){
+    .menu-button{
+        display: none;
+    }
+}
+
+@media screen and (max-width : 778px){
+    .hideOnMobile{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container { 
+        height: 180px; 
+        width: 160px;
+        margin: 10px; 
+    }
+    .card {
+        height: 180px; 
+        width: 160px; 
+    } 
+}
+
+@media screen and (max-width: 400px) {
+     .container { 
+        height: 140px; 
+        width: 120px; 
+        margin: 5px; 
+    } 
+    .card { 
+        height: 140px; 
+        width: 120px; 
+    }
+
+    .sidebar{
+        width: 100%;
+    }
+}

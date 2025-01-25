@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Form</title>
+        <link rel="stylesheet" href="/static/User/Login/animlogin.css">
+    </head>
+    <body>
+        <h4>{{ warn_to_login }}</h4> 
+        {% for message in messages %}
+        <!-- messege box hear for messeges like invalid username or ... -->
+        <h4>{{ message }}</h4> 
+        {% endfor %}
+        <div class="box">
+            <span class="borderline"></span>
+            <form method="post" action="LogIn">
+                {% csrf_token %}
+                <h2>Sign in</h2>
+                <div class="inputbox">
+                    <input type="text" name="username" required="required">
+                    <span>Username</span>
+                    <i></i>
+                </div>
+                <div class="inputbox">
+                    <input type="password" name="password" required="required">
+                    <span>Password</span>
+                    <i></i>
+                </div>
+                <div class="links">
+                    <a href="#">Forget Passsword</a>
+                    <a href="#">Submit</a>
+                </div>
+                <input type="submit" value="Login">
+                <br>
+                <br>
+                <div class="links">
+                    <a href="/User/SignIn" style="font-size:12pt">New User</a>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQ Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            width : 100%;
+            display: flex;
+            justify-content : center;
+            align-items: center;
+            flex-direction: column;
+            margin : 0;
+            background-image : url(img.jpg);
+            background-position: center;
+            background-repeat : no-repeat;
+            background-size  : cover;
+        }
+
+        body h1{
+            font-size : 3rem;
+            color : white;
+        }
+        
+        .quiz-container {
+            margin-bottom: 20px;
+        }
+        .feedback {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .correct {
+            color: green;
+        }
+        .incorrect {
+            color: red;
+        }
+        .question-container {
+            margin-bottom: 2rem;
+            font-size: 1.6rem;
+            text-align: center;
+        }
+        .options-container {
+            margin-bottom: 3rem;
+        }
+
+        .options-container-1{
+            display: flex;
+            justify-content: space-around;
+            align-items : center;
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .quiz-parent{
+            padding : 10px;
+            border : 2px solid #000;
+            box-shadow: 2px 2px 15px 1px #a1a0a0;
+            border-radius : 15px;
+            width : 40vw; 
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            background-color : white;
+        }
+
+        #feedback-container{
+            padding : 1rem;
+        }
+
+        @media screen and (max-width : 440px){
+            .quiz-parent{
+                width : 60vw;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Quiz</h1>
+
+    <div class="quiz-parent">
+        <div class="quiz-container" id="quiz-container">
+            <div class="question-container">
+                <p id="question-text">Loading Please Wait........</p>
+            </div>
+            <div class="options-container">
+                <div class="options-container-1">
+                    <label><input type="radio" name="answer" value="2" id="option2"> <span id="option2-text"></span></label>
+                    <label><input type="radio" name="answer" value="1" id="option1"> <span id="option1-text"></span></label>
+                </div>
+                <div class="options-container-1">
+                    <label><input type="radio" name="answer" value="4" id="option4"> <span id="option4-text"></span></label>
+                    <label><input type="radio" name="answer" value="3" id="option3"> <span id="option3-text"></span></label>
+                </div>
+            </div>
+            <center><button onclick="submitAnswer()">Submit</button></center>
+        </div>
+        <center><button onclick="window.location.reload();">Refresh Quiz</button></center>
+
+    </div>
+
+    <div id="feedback-container">
+        <p id="feedback" class="feedback"></p>
+        <p id="explanation" class="feedback"></p>
+    </div>
+
+    <script>
+        let currentQuizId = null;
+        let language = '{{lang}}';  // You can dynamically set the language here
+
+        // Function to fetch the quiz question from the server
+        function fetchQuestion(language) {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', `/get_quiz/${language}`, true); // Django URL for get_quiz
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    const data = JSON.parse(xhr.responseText);
+                    const quiz = data.quiz;
+                    currentQuizId = quiz.id; // Store the current quiz ID for checking the answer
+                    document.getElementById('question-text').innerText = quiz.question;
+
+                    // Populate the options
+                    document.getElementById('option1-text').innerText = quiz.option1;
+                    document.getElementById('option2-text').innerText = quiz.option2;
+                    document.getElementById('option3-text').innerText = quiz.option3;
+                    document.getElementById('option4-text').innerText = quiz.option4;
+                } else {
+                    console.error('Failed to load quiz');
+                }
+            };
+            xhr.send();
+        }
+
+        // Function to submit the answer to the server for validation
+        function submitAnswer() {
+            const selectedOption = document.querySelector('input[name="answer"]:checked');
+
+            if (!selectedOption) {
+                alert("Please select an answer.");
+                return;
+            }
+
+            const userAnswer = selectedOption.value;
+
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', `/check_ans/${language}?answer=${userAnswer}&quiz_id=${currentQuizId}`, true); // Django URL for check_ans with GET
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    const data = JSON.parse(xhr.responseText);
+                    const quiz = data.quiz;
+                    displayFeedback(quiz, userAnswer);
+                } else {
+                    console.error('Failed to check answer');
+                }
+            };
+            xhr.send();
+        }
+
+        // Display feedback based on the validation response
+        function displayFeedback(quiz, userAnswer) {
+            const feedback = document.getElementById('feedback');
+            const explanation = document.getElementById('explanation');
+
+            if (userAnswer === quiz.answer) {
+                feedback.innerText = 'Correct!';
+                feedback.classList.add('correct');
+                feedback.classList.remove('incorrect');
+            } else {
+                feedback.innerText = 'Incorrect!';
+                feedback.classList.add('incorrect');
+                feedback.classList.remove('correct');
+            }
+
+            explanation.innerText = 'Explanation: ' + quiz.explanation;
+        }
+
+        // Fetch the first question when the page loads
+        window.onload = function() {
+            fetchQuestion(language);
+        };
+    </script>
+
+</body>
+</html>
