@@ -1,0 +1,659 @@
+1. What is SQLite?
+
+a) A Relational Database Management System (RDBMS)
+b) A NoSQL Database Management System
+c) A Graph Database Management System
+d) A File System
+
+Answer: a) A Relational Database Management System (RDBMS)
+
+Explanation: SQLite is a free and open-source relational database management system that uses SQL to manage and manipulate data. It is a self-contained, serverless, zero-configuration, transactional database engine that is designed for embedded use.
+
+2. What is the file extension used by SQLite databases?
+
+a) .sql
+b) .db
+c) .txt
+d) .data
+
+Answer: b) .db
+
+Explanation: SQLite databases use the file extension .db. When you create a new database using SQLite, it creates a file with the .db extension on your system.
+
+3. Which of the following is not a valid data type in SQLite?
+
+a) TEXT
+b) INTEGER
+c) FLOAT
+d) DECIMAL
+
+Answer: d) DECIMAL
+
+Explanation: SQLite does not have a DECIMAL data type. However, it does support a NUMERIC data type that can be used to store decimal values.
+
+4. Which command is used to create a new database in SQLite?
+
+a) CREATE
+b) INSERT
+c) SELECT
+d) ATTACH
+
+Answer: d) ATTACH
+
+Explanation: The ATTACH command is used to create a new database in SQLite. The syntax is as follows: ATTACH DATABASE ‘database_name’ AS ‘alias_name’;
+
+5. Which of the following is not a valid SQL statement in SQLite?
+
+a) CREATE TABLE
+b) SELECT FROM
+c) INSERT INTO
+d) UPDATE
+
+Answer: b) SELECT FROM
+
+Explanation: The correct syntax for the SELECT statement in SQLite is SELECT column_name FROM table_name. The FROM keyword is required to specify the table from which the data is being selected.
+
+6. What is the maximum length of a VARCHAR field in SQLite?
+
+a) 255 characters
+b) 32767 characters
+c) 65535 characters
+d) 2147483647 characters
+
+Answer: b) 32767 characters
+
+Explanation: In SQLite, the maximum length of a VARCHAR field is 32767 characters.
+
+7. Which of the following statements is used to delete a table in SQLite?
+
+a) DROP
+b) DELETE
+c) TRUNCATE
+d) REMOVE
+
+Answer: a) DROP
+
+Explanation: The DROP statement is used to delete a table in SQLite. The syntax is as follows: DROP TABLE table_name;
+
+8. Which of the following statements is used to add a new column to an existing table in SQLite?
+
+a) ALTER TABLE
+b) MODIFY TABLE
+c) UPDATE TABLE
+d) ADD COLUMN
+
+Answer: d) ADD COLUMN
+
+Explanation: The ADD COLUMN statement is used to add a new column to an existing table in SQLite. The syntax is as follows: ALTER TABLE table_name ADD COLUMN column_name data_type;
+
+9. Which of the following commands is used to view the structure of a table in SQLite?
+
+a) DESCRIBE
+b) SELECT
+c) SHOW
+d) EXPLAIN
+
+Answer: a) DESCRIBE
+
+Explanation: The DESCRIBE statement is used to view the structure of a table in SQLite. The syntax is as follows: DESCRIBE table_name;
+
+10. Which of the following is not a valid SQLite data type?
+
+a) BOOLEAN
+b) BLOB
+c) DATE
+d) DOUBLE
+
+Answer: a) BOOLEAN
+
+Explanation: SQLite does not have a BOOLEAN data type. However, you can use the INTEGER data type to represent boolean values, where 0 represents false and 1 represents true.
+
+11. Which of the following is not a valid SQLite constraint?
+
+a) NOT NULL
+b) PRIMARY KEY
+c) UNIQUE
+d) FOREIGN KEY
+
+Answer: d) FOREIGN KEY
+
+Explanation: FOREIGN KEY is a valid constraint in SQLite. It is used to define a relationship between two tables. The syntax for adding a foreign key constraint is as follows: FOREIGN KEY (column_name) REFERENCES table_name(column_name);
+
+12. Which of the following commands is used to insert data into a table in SQLite?
+
+a) INSERT INTO
+b) ADD
+c) UPDATE
+d) CREATE
+
+Answer: a) INSERT INTO
+
+Explanation: The INSERT INTO statement is used to insert data into a table in SQLite. The syntax is as follows: INSERT INTO table_name (column1, column2, …) VALUES (value1, value2, …);
+
+13. Which of the following commands is used to update data in a table in SQLite?
+
+a) UPDATE
+b) MODIFY
+c) ALTER
+d) CHANGE
+
+Answer: a) UPDATE
+
+Explanation: The UPDATE statement is used to update data in a table in SQLite. The syntax is as follows: UPDATE table_name SET column1=value1, column2=value2 WHERE condition;
+
+14. Which of the following commands is used to delete data from a table in SQLite?
+
+a) REMOVE
+b) DROP
+c) TRUNCATE
+d) DELETE
+
+Answer: d) DELETE
+
+Explanation: The DELETE statement is used to delete data from a table in SQLite. The syntax is as follows: DELETE FROM table_name WHERE condition;
+
+15. Which of the following commands is used to create an index on a table in SQLite?
+
+a) CREATE INDEX
+b) ADD INDEX
+c) ALTER INDEX
+d) MODIFY INDEX
+
+Answer: a) CREATE INDEX
+
+Explanation: The CREATE INDEX statement is used to create an index on a table in SQLite. The syntax is as follows: CREATE INDEX index_name ON table_name (column_name);
+
+16. Which of the following commands is used to drop an index in SQLite?
+
+a) DROP INDEX
+b) REMOVE INDEX
+c) DELETE INDEX
+d) DESTROY INDEX
+
+Answer: a) DROP INDEX
+
+Explanation: The DROP INDEX statement is used to drop an index in SQLite. The syntax is as follows: DROP INDEX index_name;
+
+17. Which of the following commands is used to create a view in SQLite?
+
+a) CREATE VIEW
+b) ADD VIEW
+c) ALTER VIEW
+d) MODIFY VIEW
+
+Answer: a) CREATE VIEW
+
+Explanation: The CREATE VIEW statement is used to create a view in SQLite. The syntax is as follows: CREATE VIEW view_name AS SELECT column1, column2, … FROM table_name WHERE condition;
+
+18. Which of the following commands is used to drop a view in SQLite?
+
+a) DROP VIEW
+b) REMOVE VIEW
+c) DELETE VIEW
+d) DESTROY VIEW
+
+Answer: a) DROP VIEW
+
+Explanation: The DROP VIEW statement is used to drop a view in SQLite. The syntax is as follows: DROP VIEW view_name;
+
+19. Which of the following commands is used to create a trigger in SQLite?
+
+a) CREATE TRIGGER
+b) ADD TRIGGER
+c) ALTER TRIGGER
+d) MODIFY TRIGGER
+
+Answer: a) CREATE TRIGGER
+
+Explanation: The CREATE TRIGGER statement is used to create a trigger in SQLite. The syntax is as follows: CREATE TRIGGER trigger_name BEFORE/AFTER INSERT/UPDATE/DELETE ON table_name FOR EACH ROW BEGIN … END;
+
+20. Which of the following is true about SQLite transactions?
+
+a) Transactions are not supported in SQLite.
+b) A transaction is a sequence of SQL statements that are executed as a single unit of work.
+c) A transaction can be rolled back if any of the SQL statements in the transaction fail.
+d) All of the above.
+
+Answer: b) A transaction is a sequence of SQL statements that are executed as a single unit of work.
+
+Explanation: SQLite supports transactions, and a transaction is a sequence of SQL statements that are executed as a single unit of work. If any of the SQL statements in the transaction fail, the transaction can be rolled back to the point before it started.
+
+21. Which of the following statements is true about SQLite triggers?
+
+a) A trigger is a type of constraint.
+b) A trigger is a block of SQL code that is automatically executed in response to certain events.
+c) A trigger can be used to enforce data integrity rules.
+d) All of the above.
+
+Answer: b) A trigger is a block of SQL code that is automatically executed in response to certain events.
+
+Explanation: A trigger is a block of SQL code that is automatically executed in response to certain events, such as an insert, update, or delete operation on a table. A trigger is not a type of constraint, although it can be used to enforce data integrity rules.
+
+22. Which of the following is true about SQLite indexes?
+
+a) An index is used to speed up data retrieval from a table.
+b) An index is created on one or more columns of a table.
+c) An index can be created using the CREATE INDEX statement.
+d) All of the above.
+
+Answer: d) All of the above.
+
+Explanation: An index is used to speed up data retrieval from a table, and it is created on one or more columns of a table. An index can be created using the CREATE INDEX statement.
+
+23. Which of the following statements is true about SQLite views?
+
+a) A view is a virtual table that does not actually exist in the database.
+b) A view is created using a SELECT statement.
+c) A view can be used to simplify complex queries.
+d) All of the above.
+
+Answer: d) All of the above.
+
+Explanation: A view is a virtual table that does not actually exist in the database, and it is created using a SELECT statement. A view can be used to simplify complex queries and provide a simpler interface to the underlying data.
+
+24. Which of the following is true about SQLite data types?
+
+a) SQLite supports several built-in data types, including INTEGER, REAL, TEXT, and BLOB.
+b) The data type of a column is specified when the table is created.
+c) The data type of a column can be changed using the ALTER TABLE statement.
+d) All of the above.
+
+Answer: d) All of the above.
+
+Explanation: SQLite supports several built-in data types, including INTEGER, REAL, TEXT, and BLOB. The data type of a column is specified when the table is created, and it can be changed using the ALTER TABLE statement.
+
+25. Which of the following is true about SQLite primary keys?
+
+a) A primary key is a column or a set of columns that uniquely identify each row in a table.
+b) A primary key can be created using the PRIMARY KEY constraint.
+c) A table can have multiple primary keys.
+d) None of the above.
+
+Answer: a) A primary key is a column or a set of columns that uniquely identify each row in a table.
+
+Explanation: A primary key is a column or a set of columns that uniquely identify each row in a table. A primary key can be created using the PRIMARY KEY constraint. A table can have only one primary key, although a primary key can consist of multiple columns.
+
+26. Which of the following is true about SQLite foreign keys?
+
+a) A foreign key is a column or a set of columns that refer to the primary key of another table.
+b) A foreign key can be used to enforce referential integrity between two tables.
+c) SQLite supports foreign keys, but they are not enabled by default.
+d) All of the above.
+
+Answer: d) All of the above.
+
+Explanation: A foreign key is a column or a set of columns that refers to the primary key of another table, and it can be used to enforce referential integrity between two tables. SQLite supports foreign keys, but they are not enabled by default. Foreign keys can be enabled using the PRAGMA foreign_keys command.
+
+27. Which of the following statements is true about SQLite collations?
+
+a) A collation determines how strings are compared and sorted.
+b) SQLite has several built-in collations, including BINARY, NOCASE, and RTRIM.
+c) A custom collation can be created using the CREATE COLLATION statement.
+d) All of the above.
+
+Answer: d) All of the above.
+
+Explanation: A collation determines how strings are compared and sorted, and SQLite has several built-in collations, including BINARY, NOCASE, and RTRIM. A custom collation can be created using the CREATE COLLATION statement.
+
+28. Which of the following statements is true about SQLite full-text search?
+
+a) SQLite supports full-text search using the FTS5 extension.
+b) Full-text search allows you to search for words or phrases within a large block of text.
+c) Full-text search can be faster than a LIKE query for large amounts of text.
+d) All of the above.
+
+Answer: d) All of the above.
+
+Explanation: SQLite supports full-text search using the FTS5 extension, which allows you to search for words or phrases within a large block of text. Full-text search can be faster than a LIKE query for large amounts of text.
+
+29. Which of the following statements is true about SQLite encryption?
+
+a) SQLite supports encryption using the SQLite Encryption Extension (SEE).
+b) The SEE extension is included with every copy of SQLite.
+c) Encryption can be used to protect sensitive data stored in an SQLite database.
+d) All of the above.
+
+Answer: a) SQLite supports encryption using the SQLite Encryption Extension (SEE).
+
+Explanation: SQLite supports encryption using the SQLite Encryption Extension (SEE), which is not included with every copy of SQLite. Encryption can be used to protect sensitive data stored in an SQLite database.
+
+30. Which of the following statements is true about SQLite indexes?
+
+a) An index is a data structure that improves the speed of data retrieval operations on a table.
+b) An index can be created on one or more columns of a table.
+c) SQLite supports several types of indexes, including B-tree and Hash indexes.
+d) All of the above.
+
+Answer: d) All of the above.
+
+Explanation: An index is a data structure that improves the speed of data retrieval operations on a table, and it can be created on one or more columns of a table. SQLite supports several types of indexes, including B-tree and Hash indexes.
+
+31. Which of the following statements is true about SQLite transactions?
+
+a) A transaction is a sequence of database operations that are treated as a single unit of work.
+b) SQLite supports both implicit and explicit transactions.
+c) An implicit transaction is started automatically by SQLite for each database operation.
+d) All of the above.
+
+Answer: a) A transaction is a sequence of database operations that are treated as a single unit of work.
+
+Explanation: A transaction is a sequence of database operations that are treated as a single unit of work. SQLite supports both implicit and explicit transactions, and an implicit transaction is started automatically by SQLite for each database operation.
+
+32. Which of the following statements is true about SQLite backup and restore?
+
+a) SQLite provides built-in commands for backing up and restoring a database.
+b) The backup and restore commands can be executed using the sqlite3 command-line tool.
+c) The backup command creates a copy of a database in a separate file.
+d) All of the above.
+
+Answer: d) All of the above.
+
+Explanation: SQLite provides built-in commands for backing up and restoring a database, which can be executed using the sqlite3 command-line tool. The backup command creates a copy of a database in a separate file.
+
+33. Which of the following SQL statements is used to insert data into a table in SQLite?
+
+a) INSERT INTO
+b) INSERT VALUES
+c) INSERT DATA
+d) None of the above
+
+Answer: a) INSERT INTO
+
+Explanation: The INSERT INTO statement is used to insert data into a table in SQLite.
+
+34. Which of the following SQL statements is used to update data in a table in SQLite?
+
+a) UPDATE TABLE
+b) UPDATE SET
+c) MODIFY
+d) None of the above
+
+Answer: b) UPDATE SET
+
+Explanation: The UPDATE SET statement is used to update data in a table in SQLite.
+
+35. Which of the following SQL statements is used to delete data from a table in SQLite?
+
+a) DELETE FROM
+b) DROP FROM
+c) REMOVE
+d) None of the above
+
+Answer: a) DELETE FROM
+
+Explanation: The DELETE FROM statement is used to delete data from a table in SQLite.
+
+36. Which of the following SQL statements is used to create a new table in SQLite?
+
+a) CREATE TABLE
+b) MAKE TABLE
+c) ADD TABLE
+d) None of the above
+
+Answer: a) CREATE TABLE
+
+Explanation: The CREATE TABLE statement is used to create a new table in SQLite.
+
+37. Which of the following SQL statements is used to add a new column to an existing table in SQLite?
+
+a) ADD COLUMN
+b) CREATE COLUMN
+c) INSERT COLUMN
+d) None of the above
+
+Answer: a) ADD COLUMN
+
+Explanation: The ADD COLUMN statement is used to add a new column to an existing table in SQLite.
+
+38. Which of the following SQL statements is used to remove a column from an existing table in SQLite?
+
+a) DROP COLUMN
+b) REMOVE COLUMN
+c) DELETE COLUMN
+d) None of the above
+
+Answer: a) DROP COLUMN
+
+Explanation: The DROP COLUMN statement is used to remove a column from an existing table in SQLite.
+
+39. Which of the following SQL statements is used to rename a table in SQLite?
+
+a) RENAME TABLE
+b) MODIFY TABLE
+c) ALTER TABLE
+d) None of the above
+
+Answer: a) RENAME TABLE
+
+Explanation: The RENAME TABLE statement is used to rename a table in SQLite.
+
+40. Which of the following SQL statements is used to add a primary key constraint to a table in SQLite?
+
+a) ADD CONSTRAINT PRIMARY KEY
+b) ADD PRIMARY KEY
+c) PRIMARY KEY CONSTRAINT
+d) None of the above
+
+Answer: b) ADD PRIMARY KEY
+
+Explanation: The ADD PRIMARY KEY statement is used to add a primary key constraint to a table in SQLite.
+
+41. Which of the following SQL statements is used to add a foreign key constraint to a table in SQLite?
+
+a) ADD FOREIGN KEY
+b) ADD CONSTRAINT FOREIGN KEY
+c) FOREIGN KEY CONSTRAINT
+d) None of the above
+
+Answer: b) ADD CONSTRAINT FOREIGN KEY
+
+Explanation: The ADD CONSTRAINT FOREIGN KEY statement is used to add a foreign key constraint to a table in SQLite.
+
+42. Which of the following SQL statements is used to create an index on a table in SQLite?
+
+a) CREATE INDEX
+b) MAKE INDEX
+c) ADD INDEX
+d) None of the above
+
+Answer: a) CREATE INDEX
+
+Explanation: The CREATE INDEX statement is used to create an index on a table in SQLite.
+
+43. Which of the following SQL statements is used to drop an index from a table in SQLite?
+
+a) DROP INDEX
+b) REMOVE INDEX
+c) DELETE INDEX
+d) None of the above
+
+Answer: a) DROP INDEX
+
+Explanation: The DROP INDEX statement is used to drop an index from a table in SQLite.
+
+44. Which of the following SQL statements is used to create a view in SQLite?
+
+a) CREATE VIEW
+b) MAKE VIEW
+c) ADD VIEW
+d) None of the above
+
+Answer: a) CREATE VIEW
+
+Explanation: The CREATE VIEW statement is used to create a view in SQLite.
+
+45. Which of the following SQL statements is used to drop a view from SQLite?
+
+a) DROP VIEW
+b) REMOVE VIEW
+c) DELETE VIEW
+d) None of the above
+
+Answer: a) DROP VIEW
+
+Explanation: The DROP VIEW statement is used to drop a view from SQLite.
+
+46. Which of the following is NOT a valid data type in SQLite?
+
+a) INT
+b) FLOAT
+c) DECIMAL
+d) BOOLEAN
+
+Answer: c) DECIMAL
+
+Explanation: DECIMAL is not a valid data type in SQLite. The valid data types in SQLite are INTEGER, REAL, TEXT, and BLOB.
+
+47. Which of the following SQL statements is used to create a temporary table in SQLite?
+
+a) CREATE TEMPORARY TABLE
+b) CREATE TABLE TEMPORARY
+c) TEMPORARY TABLE
+d) None of the above
+
+Answer: a) CREATE TEMPORARY TABLE
+
+Explanation: The CREATE TEMPORARY TABLE statement is used to create a temporary table in SQLite.
+
+48. Which of the following SQL statements is used to create a trigger in SQLite?
+
+a) CREATE TRIGGER
+b) MAKE TRIGGER
+c) ADD TRIGGER
+d) None of the above
+
+Answer: a) CREATE TRIGGER
+
+Explanation: The CREATE TRIGGER statement is used to create a trigger in SQLite.
+
+49. Which of the following SQL statements is used to drop a trigger from SQLite?
+
+a) DROP TRIGGER
+b) REMOVE TRIGGER
+c) DELETE TRIGGER
+d) None of the above
+
+Answer: a) DROP TRIGGER
+
+Explanation: The DROP TRIGGER statement is used to drop a trigger from SQLite.
+
+50. Which of the following SQL statements is used to create a stored procedure in SQLite?
+
+a) CREATE PROCEDURE
+b) MAKE PROCEDURE
+c) ADD PROCEDURE
+d) None of the above
+
+Answer: a) CREATE PROCEDURE
+
+Explanation: The CREATE PROCEDURE statement is used to create a stored procedure in SQLite.
+
+51. Which of the following SQL statements is used to drop a stored procedure from SQLite?
+
+a) DROP PROCEDURE
+b) REMOVE PROCEDURE
+c) DELETE PROCEDURE
+d) None of the above
+
+Answer: a) DROP PROCEDURE
+
+Explanation: The DROP PROCEDURE statement is used to drop a stored procedure from SQLite.
+
+52. Which of the following is NOT a valid comparison operator in SQLite?
+
+a) =
+b) <>
+c) ==
+d) LIKE
+
+Answer: c) ==
+
+Explanation: == is not a valid comparison operator in SQLite. The valid comparison operators are =, <>, <, >, <=, >=, and LIKE.
+
+53. Which of the following is NOT a valid logical operator in SQLite?
+
+a) AND
+b) OR
+c) NOT
+d) XOR
+
+Answer: d) XOR
+
+Explanation: XOR is not a valid logical operator in SQLite. The valid logical operators are AND, OR, and NOT.
+
+54. Which of the following is the correct syntax for a SELECT statement in SQLite?
+
+a) SELECT columns FROM table WHERE condition ORDER BY column
+b) SELECT table FROM columns WHERE condition ORDER BY column
+c) SELECT columns FROM table ORDER BY column WHERE condition
+d) None of the above
+
+Answer: a) SELECT columns FROM table WHERE condition ORDER BY column
+
+Explanation: The correct syntax for a SELECT statement in SQLite is SELECT columns FROM table WHERE condition ORDER BY column.
+
+55. Which of the following is the correct syntax for an INNER JOIN in SQLite?
+
+a) SELECT columns FROM table1 INNER JOIN table2 ON condition
+b) SELECT table1 FROM columns INNER JOIN table2 ON condition
+c) SELECT columns FROM table1 JOIN table2 ON condition
+d) None of the above
+
+Answer: a) SELECT columns FROM table1 INNER JOIN table2 ON condition
+
+Explanation: The correct syntax for an INNER JOIN in SQLite is SELECT columns FROM table1 INNER JOIN table2 ON condition.
+
+56. Which of the following is the correct syntax for a LEFT OUTER JOIN in SQLite?
+
+a) SELECT columns FROM table1 LEFT OUTER JOIN table2 ON condition
+b) SELECT table1 FROM columns LEFT OUTER JOIN table2 ON condition
+c) SELECT columns FROM table1 JOIN table2 ON condition
+d) None of the above
+
+Answer: a) SELECT columns FROM table1 LEFT OUTER JOIN table2 ON condition
+
+Explanation: The correct syntax for a LEFT OUTER JOIN in SQLite is SELECT columns FROM table1 LEFT OUTER JOIN table2 ON condition.
+
+57. Which of the following is the correct syntax for a GROUP BY clause in SQLite?
+
+a) GROUP BY columns ORDER BY columns
+b) ORDER BY column GROUP BY columns
+c) GROUP columns BY ORDER column
+d) None of the above
+
+Answer: a) GROUP BY columns ORDER BY column
+
+Explanation: The correct syntax for a GROUP BY clause in SQLite is GROUP BY columns ORDER BY column.
+
+58. Which of the following is the correct syntax for a HAVING clause in SQLite?
+
+a) HAVING condition
+b) WHERE condition HAVING columns
+c) HAVING columns WHERE condition
+d) None of the above
+
+Answer: a) HAVING condition
+
+Explanation: The correct syntax for a HAVING clause in SQLite is the HAVING condition.
+
+59. Which of the following is the correct syntax for a CASE statement in SQLite?
+
+a) CASE expression WHEN value1 THEN result1 WHEN value2 THEN result2 ELSE result3 END
+b) CASE expression value1 THEN result1 value2 THEN result2 ELSE result3 END
+c) CASE expression WHEN value1 THEN result1 ELSE result2 END
+d) None of the above
+
+Answer: a) CASE expression WHEN value1 THEN result1 WHEN value2 THEN result2 ELSE result3 END
+
+Explanation: The correct syntax for a CASE statement in SQLite is CASE expression WHEN value1 THEN result1 WHEN value2 THEN result2 ELSE result3 END.
+
+60. Which of the following is the correct syntax for an IF statement in SQLite?
+
+a) IF condition THEN statement END IF
+b) IF statement THEN condition END IF
+c) IF condition statement END IF
+d) None of the above
+
+Answer: d) None of the above
+
+Explanation: SQLite does not have an IF statement. Instead, you can use a CASE statement.

@@ -1,0 +1,199 @@
+1. What is the output of print(2 ** 3 ** 2)?
+a) 64
+b) 512
+c) 256
+d) 32
+
+Answer: b)
+
+Explanation: Operator precedence for ** is right-to-left. So, 3 ** 2 evaluates to 9, and then 2 ** 9 equals 512.
+
+2. Which of the following is mutable in Python?
+a) Tuple
+b) List
+c) String
+d) Integer
+
+Answer: b)
+
+Explanation: Lists are mutable, meaning their content can be changed after creation, unlike tuples, strings, or integers.
+
+3. What does len([1, [2, 3], 4]) return?
+a) 2
+b) 3
+c) 4
+d) Error
+
+Answer: b)
+
+Explanation: The len() function counts the top-level elements in the list. [1, [2, 3], 4] has 3 elements.
+
+4. What is the output of bool([])?
+a) True
+b) False
+c) None
+d) Error
+
+Answer: b)
+
+Explanation: Empty sequences, like an empty list [], evaluate to False in a boolean context.
+
+5. Which statement is used to exit a loop early?
+a) continue
+b) pass
+c) break
+d) return
+
+Answer: c)
+
+Explanation: The break statement exits a loop immediately.
+
+6. What is the data type of type(3)?
+a) int
+b) type
+c) str
+d) float
+
+Answer: b)
+
+Explanation: The type() function returns the type of the argument. Here, type(3) returns <class 'int'>, which is of type type.
+
+7. What does 5 // 2 evaluate to?
+a) 2.5
+b) 2
+c) 3
+d) 2.0
+
+Answer: b)
+
+Explanation: // is the floor division operator, which returns the integer part of the division, ignoring the remainder.
+
+8. Which method adds an item to the end of a list?
+a) append()
+b) add()
+c) extend()
+d) insert()
+
+Answer: a)
+
+Explanation: The append() method adds an item to the end of a list.
+
+9. What does list(range(0, 5, 2)) return?
+a) [0, 1, 2, 3, 4]
+b) [0, 2, 4]
+c) [0, 5, 2]
+d) Error
+
+Answer: b)
+
+Explanation: range(0, 5, 2) generates numbers starting at 0 up to (but not including) 5, incrementing by 2: [0, 2, 4].
+
+10. What does list(set([1, 2, 2, 3])) return?
+a) [1, 2, 2, 3]
+b) [1, 2, 3]
+c) [3, 2, 1, 2]
+d) Error
+
+Answer: b)
+
+Explanation: A set removes duplicate elements. Converting it back to a list gives [1, 2, 3].
+
+11. What will s = "Hello"[::-1] output?
+a) "olleH"
+b) "Hello"
+c) "H"
+d) "eH"
+
+Answer: a)
+
+Explanation: [::-1] reverses the string, so "Hello" becomes "olleH".
+
+12. Which keyword is used to define a function?
+a) func
+b) define
+c) def
+d) function
+
+Answer: c)
+
+Explanation: The def keyword is used to define a function in Python.
+
+13. What is the output of print(2 == 2.0)?
+a) True
+b) False
+c) None
+d) Error
+
+Answer: a)
+
+Explanation: 2 (int) and 2.0 (float) are equal in value, so the output is True.
+
+14. Which method is used to remove whitespace from both ends of a string?
+a) strip()
+b) split()
+c) trim()
+d) clean()
+
+Answer: a)
+
+Explanation: The strip() method removes leading and trailing whitespace from a string.
+
+15. What will my_dict = {1: "a", 2: "b"} return for my_dict.get(3)?
+a) "b"
+b) 3
+c) None
+d) Error
+
+Answer: c)
+
+Explanation: The get() method returns None if the key doesn’t exist in the dictionary.
+
+16. What does max([1, 5, 3, 9]) return?
+a) 1
+b) 5
+c) 9
+d) Error
+
+Answer: c)
+
+Explanation: The max() function returns the largest value in the list, which is 9.
+
+17. How do you create an empty set?
+a) set = {}
+b) set()
+c) {}
+d) empty_set()
+
+Answer: b)
+
+Explanation: set() creates an empty set. {} creates an empty dictionary.
+
+18. What does if not 0: evaluate to?
+a) True
+b) False
+c) 0
+d) None
+
+Answer: a)
+
+Explanation: 0 is falsy in Python, so not 0 evaluates to True.
+
+19. What is the output of [i for i in range(3)]?
+a) [0, 1, 2]
+b) [1, 2, 3]
+c) [0, 1, 2, 3]
+d) [3, 2, 1]
+
+Answer: a)
+
+Explanation: A list comprehension generates [0, 1, 2] for range(3).
+
+20. What does import math allow you to do?
+a) Use built-in functions
+b) Access mathematical functions
+c) Define variables
+d) Exit the program
+
+Answer: b)
+
+Explanation: import math gives access to the math module, which contains mathematical functions like math.sqrt.

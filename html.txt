@@ -1,0 +1,80 @@
+1. Which tag is used to define the largest heading in HTML? 
+a) <head> 
+b) <h1> 
+c) <h6>  
+d) <header>  
+Answer: b) <h1>  
+Explanation: <h1> is used for the largest heading, while <h6> defines the smallest heading.
+
+2. Which attribute is used to provide an alternative text for an image in HTML? 
+a) alt  
+b) title  
+c) src  
+d) longdesc  
+Answer: a) alt  
+Explanation: The alt attribute is used to provide alternative text for an image, which is displayed if the image cannot be loaded.
+
+3. What is the correct HTML element for inserting a line break?  
+a) <br>  
+b) <lb>  
+c) <break>  
+d) <line>  
+Answer: a) <br>  
+Explanation: The <br> tag is used to insert a line break in the text.
+
+4. Which tag is used to create an unordered list in HTML?  
+a) <ul>  
+b) <ol>  
+c) <li>
+d) <list>  
+Answer: a) <ul>  
+Explanation: The <ul> tag is used to create an unordered (bulleted) list, while <ol> is used for ordered (numbered) lists.
+
+5. Which of the following HTML tags is used for creating a hyperlink? 
+a) <link>  
+b) <a> 
+c) <href> 
+d) <hyperlink>  
+Answer: b) <a>  
+Explanation: The <a> tag is used to create hyperlinks, and the `href` attribute defines the URL.
+
+6. Which HTML element is used to specify a navigation menu? 
+a) <menu>  
+b) <nav>  
+c) <navigation>  
+d) <ul> 
+Answer: b) <nav>  
+Explanation: The <nav> element is used to define a block of navigation links.
+
+7. What is the correct HTML element for inserting a table?  
+a) <table>  
+b) <tab> 
+c) <tbl> 
+d) <tbody>
+Answer: a) <table>
+Explanation: The <table> tag is used to define a table in HTML.
+
+8. Which HTML tag is used to define a form for user input? 
+a) <form>  
+b) <input>
+c) <textarea>  
+d) <button>
+Answer: a) <form>
+Explanation: The <form> tag is used to define an HTML form for user input.
+
+9. Which of the following is used to add comments in HTML?  
+a) <!-- comment -->  
+b) /* comment */  
+c) // comment  
+d) # comment  
+Answer: a) <!-- comment -->
+Explanation: HTML comments are written between <!-- and -->.
+
+10. What is the purpose of the <meta> tag in HTML?  
+ a) To define metadata for the document  
+ b) To create a navigation link  
+ c) To create a heading  
+ d) To insert an image  
+ Answer: a) To define metadata for the document  
+ Explanation: The <meta> tag is used to define metadata, such as the document's character set, author, and viewport settings.
+

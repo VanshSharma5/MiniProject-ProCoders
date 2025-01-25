@@ -1,0 +1,79 @@
+1. What does the type of operator return when used on an array in JavaScript?
+a) array
+b) object 
+c) undefined
+d) null
+Answer: b) object 
+Explanation: In JavaScript, arrays are considered objects, so type of returns object for arrays.
+
+2. Which of the following is used to declare a block-scoped variable in JavaScript? 
+a) `var
+b) let
+c) const
+d) define
+Answer: b) let
+Explanation: let is used to declare variables with block scope, unlike `var`, which has function scope.*
+
+3. **What is the result of `false + 1` in JavaScript?**  
+a) `0`  
+b) `NaN`  
+c) `1`  
+d) `false`  
+**Answer: a) 0**  
+*Explanation: `false` is coerced to `0`, so the result of `false + 1` is `0`.*
+
+4. **What does the `Array.isArray()` method do?**  
+a) Checks if an array is empty  
+b) Checks if an object is an array  
+c) Converts an array to a string  
+d) Joins all elements of an array  
+**Answer: b) Checks if an object is an array**  
+*Explanation: Array.isArray() returns true if the object is an array, otherwise false.
+
+5. Which method can be used to stop further propagation of an event in JavaScript? 
+a) event.stopPropagation()  
+b) event.preventDefault() 
+c) event.stopImmediatePropagation()  
+d) event.preventBubble()
+Answer: a) event.stopPropagation() 
+Explanation: stopPropagation() prevents the event from bubbling up the DOM tree.
+
+6. What does the JSON.parse() method do in JavaScript?  
+a) Converts a JSON string to an object  
+b) Converts an object to a JSON string  
+c) Parses a string into an array  
+d) Converts a JSON object into a string  
+Answer: a) Converts a JSON string to an object  
+Explanation: JSON.parse() is used to parse a JSON string and convert it into a JavaScript object.
+
+7. What is the output of console.log(2 + '2') in JavaScript?
+a) 4  
+b) "22"  
+c) NaN  
+d) undefined
+Answer: b) "22"  
+Explanation: The + operator in JavaScript, when used with a string, concatenates the values, so the result is "22".
+
+8. Which of the following is NOT a falsy value in JavaScript? 
+a) 0  
+b) false  
+c) "" (empty string)  
+d) "false"
+Answer: d) "false"  
+Explanation: "false" is a non-empty string and is truthy, unlike 0, false, and "" which are falsy.
+
+9. What does JSON.stringify() do in JavaScript?  
+a) Converts a JavaScript object to a JSON string  
+b) Converts a JSON string to a JavaScript object  
+c) Converts a JavaScript array to an object  
+d) Converts an object to an array  
+Answer: a) Converts a JavaScript object to a JSON string
+Explanation: JSON.stringify() converts a JavaScript object or value to a JSON string.
+
+10. Which of the following will declare a constant in JavaScript?  
+ a) const x = 10;  
+ b) var x = 10;
+ c) let x = 10;  
+ d) constant x = 10; 
+ Answer: a) const x = 10;  
+ Explanation: const is used to declare a constant whose value cannot be changed after assignment.

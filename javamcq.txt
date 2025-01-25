@@ -1,0 +1,202 @@
+
+Here is a set of Java MCQs in your requested format:
+
+1. Which of the following is a valid keyword in Java?
+a) interface
+b) string
+c) Float
+d) unsigned
+
+Answer: a)
+
+Explanation: interface is a valid keyword in Java. The others (string, Float, and unsigned) are not Java keywords.
+
+2. What is the size of the int data type in Java?
+a) 2 bytes
+b) 4 bytes
+c) 8 bytes
+d) Depends on the system
+
+Answer: b)
+
+Explanation: In Java, the size of the int data type is always 4 bytes, regardless of the system architecture.
+
+3. Which method is called when an object is created?
+a) main()
+b) constructor
+c) finalize()
+d) init()
+
+Answer: b)
+
+Explanation: The constructor method is called automatically when an object is created in Java.
+
+4. What will be the output of System.out.println(10 / 3);?
+a) 3.33
+b) 3
+c) 3.0
+d) 10.0
+
+Answer: b)
+
+Explanation: In Java, dividing two integers results in an integer. So, 10 / 3 returns 3.
+
+5. Which keyword is used to prevent inheritance of a class?
+a) final
+b) static
+c) private
+d) abstract
+
+Answer: a)
+
+Explanation: The final keyword is used to prevent a class from being inherited.
+
+6. What is the default value of a boolean variable in Java?
+a) true
+b) false
+c) 0
+d) null
+
+Answer: b)
+
+Explanation: The default value of a boolean variable in Java is false.
+
+7. Which of these is a wrapper class in Java?
+a) Integer
+b) int
+c) String
+d) character
+
+Answer: a)
+
+Explanation: Integer is a wrapper class for the primitive data type int.
+
+8. What is the output of System.out.println(5 + "5");?
+a) 10
+b) 55
+c) 5 + 5
+d) "5" + 5
+
+Answer: b)
+
+Explanation: In Java, when a number is concatenated with a string using +, the number is converted to a string. Thus, the output is 55.
+
+9. Which of these loops is guaranteed to execute at least once?
+a) for loop
+b) while loop
+c) do-while loop
+d) enhanced for loop
+
+Answer: c)
+
+Explanation: A do-while loop executes its body at least once before checking the condition.
+
+10. What is the keyword used to define a constant in Java?
+a) constant
+b) final
+c) static
+d) const
+
+Answer: b)
+
+Explanation: The final keyword is used to define constants in Java, making the variable's value immutable.
+
+11. What is the base class for all classes in Java?
+a) Object
+b) Class
+c) Base
+d) Main
+
+Answer: a)
+
+Explanation: Object is the superclass for all classes in Java.
+
+12. How many primitive data types are there in Java?
+a) 6
+b) 7
+c) 8
+d) 9
+
+Answer: c)
+
+Explanation: Java has 8 primitive data types: byte, short, int, long, float, double, char, and boolean.
+
+13. Which operator is used to compare two values for equality?
+a) =
+b) ==
+c) ===
+d) equals
+
+Answer: b)
+
+Explanation: The == operator is used to compare two values for equality in Java.
+
+14. Which of the following is true about constructors in Java?
+a) They have a return type.
+b) Their name is the same as the class name.
+c) They can be inherited.
+d) They are called explicitly.
+
+Answer: b)
+
+Explanation: A constructor has the same name as the class and does not have a return type.
+
+15. What is the purpose of the super keyword?
+a) To call a superclass constructor
+b) To access a subclass method
+c) To define a static method
+d) To initialize an object
+
+Answer: a)
+
+Explanation: The super keyword is used to call a superclass constructor or access superclass members.
+
+16. What is the output of System.out.println('A' + 1);?
+a) A1
+b) 66
+c) B
+d) Error
+
+Answer: b)
+
+Explanation: The ASCII value of 'A' is 65. Adding 1 gives 66.
+
+17. Which package is imported by default in Java?
+a) java.util
+b) java.io
+c) java.lang
+d) java.math
+
+Answer: c)
+
+Explanation: The java.lang package is imported by default in every Java program.
+
+18. What is the correct syntax to declare an array in Java?
+a) int[] arr;
+b) int arr[];
+c) int arr();
+d) Both a and b
+
+Answer: d)
+
+Explanation: Both int[] arr; and int arr[]; are valid ways to declare an array in Java.
+
+19. Which of the following is used to handle exceptions in Java?
+a) try-catch
+b) throw
+c) throws
+d) All of the above
+
+Answer: d)
+
+Explanation: try-catch is used to handle exceptions, throw is used to throw exceptions, and throws is used in method declarations.
+
+20. What is the output of System.out.println("Hello".length());?
+a) 4
+b) 5
+c) 6
+d) Error
+
+Answer: b)
+
+Explanation: The length() method returns the number of characters in a string. "Hello" has 5 characters.

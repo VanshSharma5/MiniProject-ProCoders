@@ -1,0 +1,79 @@
+1. Which property is used to change the background color of an element in CSS?  
+a) color  
+b) background-color  
+c) bg-color  
+d) background  
+Answer: b) background-color 
+Explanation: The background-color property is used to set the background color of an element.
+
+2. Which CSS property controls the text size?  
+a) font-size  
+b) text-size 
+c) font  
+d) text-style  
+Answer: a) font-size  
+Explanation: The font-size property is used to set the size of the text.
+
+3. How do you make a list item not display a bullet in CSS?  
+a) list-style: none;  
+b) list-type: none;
+c) display: none; 
+d) none-list-style;  
+Answer: a) list-style: none;  
+Explanation: list-style: none; removes the default bullet point from list items.
+
+4.  Which CSS property is used to change the font of an element?  
+a) font-family  
+b) font-style  
+c) font-weight  
+d) text-font  
+Answer: a) font-family 
+Explanation: The font-family property is used to set the font for an element.
+
+5. Which property is used to add space between the content and the border of an element?  
+a) margin  
+b) padding  
+c) border-spacing  
+d) spacing  
+Answer: b) padding  
+Explanation: The padding property adds space between the content and the border inside an element.
+
+6. Which property is used to control the spacing between elements in a flex container?  
+a) gap  
+b) space-between  
+c) spacing 
+d) align-items 
+Answer: a) gap 
+Explanation: The gap property controls the spacing between flex items in a flex container.
+
+7. How do you center an element horizontally in CSS?  
+a) text-align: center; 
+b) margin: auto;  
+c) center: true; 
+d) align-center: true; 
+Answer: b) margin: auto; 
+Explanation: margin: auto; is commonly used to center a block-level element horizontally.
+
+8. Which property is used to make text bold in CSS?  
+a) font-weight: bold;  
+b) text-weight: bold;  
+c) font-style: bold; 
+d) font: bold;  
+Answer: a) font-weight: bold;  
+Explanation: The font-weight property is used to make text bold.
+
+9. How do you apply a style to an element when it is hovered over in CSS?  
+a) element:hover  
+b) hover(element)  
+c) element:focus
+d) hover(element){}  
+Answer: a) element:hover
+Explanation: The :hover pseudo-class is used to apply styles when an element is hovered over.
+
+10. Which CSS property is used to create a shadow effect around an element?  
+ a) box-shadow 
+ b) shadow-effect  
+ c) text-shadow  
+ d) border-shadow  
+ Answer: a) box-shadow  
+ Explanation: The box-shadow property is used to create shadow effects around elements.
